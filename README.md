@@ -2,25 +2,26 @@
 
 This project repository: https://github.com/aleksandrvaimo/ecommerce_express_react
 
-## How to start:
+## How to make it work locally:
 
-- clone BE repository to local environment. Eg: `git clone https://github.com/aleksandrvaimo/ecommerce_express ecommerce`
-- Next is to remove empty file from ecommerce/frontend/ folder and clone FE part there: `rm ecommerce/frontend/.gitkeep && git clone git@github.com:aleksandrvaimo/ecommerce_react.git ecommerce/frontend/`
-- Go to clened project: `cd ecommerce` and execute command: npm start to start both BE and FE `package.json` - `"start": "concurrently \"npm run start:backend\" \"npm run start:frontend\""`
+- Clone BE repository to local environment. Eg: `git clone https://github.com/aleksandrvaimo/ecommerce_express ecommerce`
+- Next is to remove empty file from ecommerce/frontend/ folder and clone FE part instead: `rm ecommerce/frontend/.gitkeep && git clone git@github.com:aleksandrvaimo/ecommerce_react.git ecommerce/frontend/`
+- Go to main project folder: `cd ecommerce` and execute command: `npm start` to start both BE and FE `package.json` - `"start": "concurrently \"npm run start:backend\" \"npm run start:frontend\""`
 
-- PORT can be easily changed in ./.env file. But also will need to changed in ./frontend/.env for global variable. Otherwise requests will not work
+- PORT can be easily changed for BE ./.env file. Also will need to changed in ./frontend/.env for global variable. Otherwise requests will not work
+
+- BE part: `index.js` `controllers/` `routes/` `services/`
+- FE part: `frontend/src/*`
 
 ### `npm start`
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
-
+Will ppen [http://localhost:3000](http://localhost:3000) to view it in your browser.
 BE will run on PORT 3001 
 
-## How to Use
+- By default products will be fetched from API `https://homework.solutional.ee/api/products` and displayed on a front page 
+- New order will be created. (New orders can be added by clicking on 'Create New Order' btn)
 
-- 1 step: load product from API
-- 2 step create empty order. New orders can be added bt clicking on 'Create New Order' btn
+## How to Use (product section)
 
 - 'Add To Order'  -  add item to order(multiple click on button will add +1 product qty to order)
 - 'Replace With' - You will see a 'Replace Item' button as soon as existing product will be found while typing for it in current field. Existing product will be replaced by clicking on 'Replace Item'. Clear input to see 'Add To Order'
