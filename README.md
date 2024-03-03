@@ -5,7 +5,7 @@ This project repository: https://github.com/aleksandrvaimo/ecommerce_express_rea
 ## How to start:
 
 - clone BE repository to local environment. Eg: `git clone https://github.com/aleksandrvaimo/ecommerce_express ecommerce`
-- Next is to clone FE part: `git clone git@github.com:aleksandrvaimo/ecommerce_react.git ecommerce/frontend/`
+- Next is to remove empty file from ecommerce/frontend/ folder and clone FE part there: `rm ecommerce/frontend/.gitkeep && git clone git@github.com:aleksandrvaimo/ecommerce_react.git ecommerce/frontend/`
 - Go to clened project: `cd ecommerce` and execute command: npm start to start both BE and FE `package.json` - `"start": "concurrently \"npm run start:backend\" \"npm run start:frontend\""`
 
 - PORT can be easily changed in ./.env file. But also will need to changed in ./frontend/.env for global variable. Otherwise requests will not work
